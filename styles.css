@@ -1,0 +1,82 @@
+:root{
+    --background-grey-color: rgb(37, 37, 37);
+    --foreground-grey-color: rgb(238, 238, 238);
+    --white-color: white;
+    font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    max-width: 1440px;
+    min-width: 600px;
+    min-height: 100vh;
+    background-color: var(--background-grey-color);
+}
+
+@font-face {
+    font-family: norse-bold;
+    src: url(font/Norse-Bold.otf);
+}
+
+.form{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.image{
+    max-width: 34rem;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.form-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container div{
+    flex: 1 1 auto;
+}
+
+.form-title h2, .form-data input, h2, .form-submit button, p{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.form-title, .form-submit{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--foreground-grey-color);
+}
+
+.form-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+
+.form-data div{
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;
+}
+
+.form-data input{
+    width: 200px;
+    height: 30px;
+}
