@@ -9,7 +9,10 @@
 <body>
     <form class="form" action="post">
         <div class="image-container">
-            <img class="image" src="./image/plant-image.jpg" alt="Image of a plant in the jungle">
+            <div class="odin-container">
+                <img src="./image/odin.png" width="95px" height="127px" alt="Logo of the odin project">
+                <span>ODIN</span>
+            </div>
         </div>
         <div class="form-container">
             <div class="form-title">
@@ -24,18 +27,34 @@
             <div class="form-data">
                 <h2>Let's do this!</h2>
                 <div class="name-container">
-                    <label for="first-name">First name</label>
-                    <input type="text" id="first-name" name="first-name">
-                    <label for="last-name">Last name</label>
-                    <input type="text" id="last-name" name="last-name">
-                </div>   
+                    <div class="first-name-container">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name">
+                    </div>
+                    <div class="last-name-container">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name">
+                    </div>
+                </div>          
                 <div class="emailtel-container">
-                    <input type="email">
-                    <input type="tel">
+                    <div class="email-container">
+                        <label for="e-mail">E-MAIL</label>
+                        <input type="email" id="e-mail" name="e-mail">
+                    </div>
+                    <div class="tel-container">
+                        <label for="phone">PHONE</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
                 </div>
-                <div class="password-container">
-                    <input type="password">
-                    <input type="password">
+                <div class="pass-container">
+                    <div class="password-container">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="confirm-container">
+                        <label for="confirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm">
+                    </div>
                 </div>
             </div>
             <div class="form-submit">

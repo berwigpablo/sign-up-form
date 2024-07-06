@@ -1,3 +1,5 @@
+@import "./node_modules/modern-normalize/modern-normalize.css"; 
+
 :root{
     --background-grey-color: rgb(37, 37, 37);
     --foreground-grey-color: rgb(238, 238, 238);
@@ -36,10 +38,33 @@ body{
     justify-content: center;
 }
 
-.image{
+.image-container{
+    min-width: 33rem;
     max-width: 34rem;
     min-height: 100vh;
+    background-image: url(./image/plant-image.jpg);
     object-fit: cover;
+    background-color: var(--white-color);
+    background-size: 680px 995px;
+    background-position: -100px 0px;
+    position: relative;
+}
+
+.odin-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+}
+
+.image-container span{
+    font-family: norse-bold;
+    font-size: 100px;
+    color: white;
 }
 
 .form-container{
@@ -52,8 +77,8 @@ body{
     flex: 1 1 auto;
 }
 
-.form-title h2, .form-data input, h2, .form-submit button, p{
-    margin-top: 40px;
+.form-title h2, .form-data div, h2, .form-submit button, p{
+    margin-top: 18px;
     margin-left: 50px;
 }
 
@@ -70,13 +95,25 @@ body{
     background-color: var(--white-color);
 }
 
-.form-data div{
+.form-data > div{
     display: flex;
-    justify-content: flex-start;
-    gap: 80px;
+    width: 650px;
 }
 
 .form-data input{
-    width: 200px;
+    width: 250px;
     height: 30px;
+    position: absolute;
+    top: 19px;
+}
+
+.first-name-container, .last-name-container, .email-container, .tel-container, .password-container, .confirm-container{
+    margin: 0 !important;
+    position: relative;
+}
+
+label{
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
 }
