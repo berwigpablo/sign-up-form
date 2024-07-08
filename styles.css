@@ -2,7 +2,7 @@
 
 :root{
     --background-grey-color: rgb(37, 37, 37);
-    --foreground-grey-color: rgb(238, 238, 238);
+    --foreground-grey-color: rgb(236, 243, 250);
     --white-color: white;
     font-size: 16px;
 }
@@ -32,6 +32,16 @@ body{
     src: url(font/Norse-Bold.otf);
 }
 
+@font-face{
+    font-family: montserrat-bold;
+    src: url(font/Montserrat-Bold.ttf);
+}
+
+@font-face{
+    font-family: montserrat;
+    src: url(font/Montserrat-Regular.ttf);
+}
+
 .form{
     min-height: 100vh;
     display: flex;
@@ -40,7 +50,6 @@ body{
 
 .image-container{
     min-width: 33rem;
-    max-width: 34rem;
     min-height: 100vh;
     background-image: url(./image/plant-image.jpg);
     object-fit: cover;
@@ -56,7 +65,7 @@ body{
     justify-content: center;
     flex-direction: center;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     position: absolute;
     top: 200px;
 }
@@ -67,10 +76,24 @@ body{
     color: white;
 }
 
+#credit{
+    font-size: 13px; 
+    font-family: montserrat;
+    position: absolute;
+    bottom: 5px;
+    left: 160px;
+}
+
+#credit a, #credit a:visited{
+    text-decoration: underline;
+    color: #E5E7EB;
+}
+
 .form-container{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: montserrat;
 }
 
 .form-container div{
@@ -80,6 +103,17 @@ body{
 .form-title h2, .form-data div, h2, .form-submit button, p{
     margin-top: 18px;
     margin-left: 50px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 80%;
+}
+
+.title:last-child{
+    margin-bottom: 60px;
 }
 
 .form-title, .form-submit{
@@ -92,19 +126,52 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-height: 300px;
     background-color: var(--white-color);
+    box-shadow: 0 2px 7px rgb(179, 178, 178);
+    clip-path: inset(0 0 -15px 0);
 }
 
 .form-data > div{
     display: flex;
-    width: 650px;
+    margin: 0;
+    margin-left: 50px;
+    max-width: 650px;
+}
+
+.form-data div:last-child{
+    margin-bottom: 20px;
+}
+
+.form-data > div > div{
+    padding: 8px 8px 8px 0;
+        }
+
+.form-data h2{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 30px;
 }
 
 .form-data input{
-    width: 250px;
+    padding: 7px;
+    width: 15rem;
     height: 30px;
     position: absolute;
-    top: 19px;
+    top: 27px;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+.form-data input:focus{
+    outline-style: none;
+    border: 1.5px solid rgb(57, 57, 202);
+    box-shadow: 1px 1px 5px #E5E7EB;
+}
+
+.form-data input:invalid{
+    outline-style: none;
+    border: 1.5px solid red;
 }
 
 .first-name-container, .last-name-container, .email-container, .tel-container, .password-container, .confirm-container{
@@ -113,7 +180,27 @@ body{
 }
 
 label{
-    font-size: 15px;
-    font-weight: bold;
+    font-family: montserrat-bold;
+    font-size: 13px;
     position: absolute;
+}
+
+.form-submit button{
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    height: 3.5rem;
+    width: 14rem;
+    font-size: 18px;
+    font-family: montserrat-bold;
+    background-color: #596D48;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(179, 178, 178);
+}
+
+.form-submit a, .form-submit a:visited{
+    font-weight: bold;
+    text-decoration:none;
+    color: #596D48;
 }
