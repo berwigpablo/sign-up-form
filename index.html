@@ -29,21 +29,22 @@
                 </div>
             </div>
             <div class="form-data">
-                <h2>Let's do this!</h2>
+                <h2>Let's do this! <span id="requirement">Fields marked with * are required</span>
+                </h2>
                 <div class="name-container">
                     <div class="first-name-container">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <label for="first-name">FIRST NAME <span aria-label="required">*</span></label>
+                        <input type="text" id="first-name" name="first-name" required>
                     </div>
                     <div class="last-name-container">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <label for="last-name">LAST NAME <span aria-label="required">*</span></label>
+                        <input type="text" id="last-name" name="last-name" required>
                     </div>
                 </div>          
                 <div class="emailtel-container">
                     <div class="email-container">
-                        <label for="e-mail">E-MAIL</label>
-                        <input type="email" id="e-mail" name="e-mail">
+                        <label for="e-mail">E-MAIL <span aria-label="required">*</span></label>
+                        <input type="email" id="e-mail" name="e-mail" placeholder="your@email.com" required>
                     </div>
                     <div class="tel-container">
                         <label for="phone">PHONE</label>
@@ -52,12 +53,12 @@
                 </div>
                 <div class="pass-container">
                     <div class="password-container">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
+                        <label for="password">PASSWORD <span aria-label="required">*</span></label>
+                        <input type="password" id="password" name="password" required>
                     </div>
                     <div class="confirm-container">
-                        <label for="confirm">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm">
+                        <label for="confirm">CONFIRM PASSWORD <span aria-label="required">*</span></label>
+                        <input type="password" id="confirm" required>
                     </div>
                 </div>
             </div>

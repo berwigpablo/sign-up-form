@@ -130,6 +130,7 @@ body{
     background-color: var(--white-color);
     box-shadow: 0 2px 7px rgb(179, 178, 178);
     clip-path: inset(0 0 -15px 0);
+    position: relative;
 }
 
 .form-data > div{
@@ -143,7 +144,7 @@ body{
     margin-bottom: 20px;
 }
 
-.form-data > div > div{
+.form-data > div > div{ 
     padding: 8px 8px 8px 0;
         }
 
@@ -163,17 +164,6 @@ body{
     border-radius: 5px;
 }
 
-.form-data input:focus{
-    outline-style: none;
-    border: 1.5px solid rgb(57, 57, 202);
-    box-shadow: 1px 1px 5px #E5E7EB;
-}
-
-.form-data input:invalid{
-    outline-style: none;
-    border: 1.5px solid red;
-}
-
 .first-name-container, .last-name-container, .email-container, .tel-container, .password-container, .confirm-container{
     margin: 0 !important;
     position: relative;
@@ -182,6 +172,19 @@ body{
 label{
     font-family: montserrat-bold;
     font-size: 13px;
+    position: absolute;
+}
+
+.form-data #requirement{
+    font-size: 15px;
+    position: absolute;
+    right: 18px;
+    color: grey;
+}
+
+.form-data span{
+    font-family: montserrat;
+    font-size: 20px;
     position: absolute;
 }
 
@@ -203,4 +206,20 @@ label{
     font-weight: bold;
     text-decoration:none;
     color: #596D48;
+}
+
+.form-data input:focus{
+    outline-style: none;
+    border: 1.5px solid rgb(57, 57, 202);
+    box-shadow: 1px 1px 5px #E5E7EB;
+}
+
+.form-data input:user-valid{
+    outline-style: none;
+    border: 1.5px solid rgb(16, 170, 16);
+}
+
+.form-data input:user-invalid{
+    outline-style: none;
+    border: 1.5px solid red;
 }
